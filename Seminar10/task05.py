@@ -24,13 +24,14 @@
 # так как данный код с аннотациями не проходит в тестовой платформе.
 """
 
+
 class Animal:
     def __init__(self, name: str):
         self.name = name
 
 
 class Bird(Animal):
-    def __init__(self, name: str, wingspan: float | int):
+    def __init__(self, name: str, wingspan):
         super().__init__(name)
         self.wingspan = wingspan
 
@@ -39,7 +40,7 @@ class Bird(Animal):
 
 
 class Fish(Animal):
-    def __init__(self, name: str, max_depth: float | int):
+    def __init__(self, name: str, max_depth):
         super().__init__(name)
         self.max_depth = max_depth
 
@@ -52,7 +53,7 @@ class Fish(Animal):
 
 
 class Mammal(Animal):
-    def __init__(self, name: str, weight: float | int):
+    def __init__(self, name: str, weight):
         super().__init__(name)
         self.weight = weight
 
