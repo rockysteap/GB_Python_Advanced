@@ -20,7 +20,8 @@ def string_to_date(s: str) -> datetime:
     first_day = date(day=1, month=month_num, year=y).isoweekday()  # 1-7
 
     day_by_date = ((1 + 7 * weeks - (first_day - weekday))
-                   if weekday < first_day else 1 + 7 * (weeks - 1) - (first_day - weekday))
+                   if weekday < first_day
+                   else 1 + 7 * (weeks - 1) - (first_day - weekday))
 
     return datetime(day=day_by_date, month=month_num, year=y)
 
@@ -30,5 +31,4 @@ if __name__ == '__main__':
     string_to_date('1-е воскресенье февраля')
     string_to_date('5-й четверг февраля')
     string_to_date('5-е воскресенье марта')
-    string_to_date('5-е воскресенье марта')
-    string_to_date('5-е пятница мая')
+    string_to_date('5-я пятница мая')
